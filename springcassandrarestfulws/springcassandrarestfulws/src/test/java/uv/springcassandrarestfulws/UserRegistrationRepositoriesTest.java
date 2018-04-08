@@ -5,12 +5,6 @@ package uv.springcassandrarestfulws;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
-
-
-
-
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -18,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import uv.springcassandrarestfulws.configuration.CassandraConfig;
 import uv.springcassandrarestfulws.model.UserRegistration;
 import uv.springcassandrarestfulws.model.UserRole;
@@ -33,16 +26,13 @@ import uv.springcassandrarestfulws.repositories.UserRegistrationTypedIdCassandra
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes =CassandraConfig.class)
 public class UserRegistrationRepositoriesTest {
-	
 private static final Logger LOGGER = Logger.getLogger(UserRegistrationRepositoriesTest.class);
-
 @Autowired
 private UserRegistrationCassandraRepository userRegistrationCassandraRepository;
 @Autowired
 private UserRegistrationCrudRepository userRegistrationCrudRepository;
 @Autowired
 private UserRegistrationTypedIdCassandraRepository userRegistrationTypedIdCassandraRepository;
-
 
 @Test
 @Ignore
@@ -69,8 +59,6 @@ public void saveUserRegistrationForTypedIdCassandraRepository(){
 	System.out.println(String.format(" saved successful getUserRegistrationId():%s",result.getUserRegistrationId()));
 }
 
-
-
 @Test
 @Ignore
 public void findAllUserRegistrationForTypedIdCassandraRepository(){
@@ -88,7 +76,6 @@ public void findAllUserRegistrationForTypedIdCassandraRepository(){
 	}
 }
 	
-
 @Test
 @Ignore
 public void saveUserRegistrationForCrudRepository(){
